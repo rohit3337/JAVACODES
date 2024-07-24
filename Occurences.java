@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 public class Occurrences {
@@ -18,26 +17,19 @@ public class Occurrences {
                 charCount[c]++;
              }
        } 
-       for(i=0;i<charCount.length;i++)
-        {
-            if(charCount[i]>0)
-            System.out.println( (char) i + ": "+charCount[i]);
-        }
-        
-       List<Integer> output=new ArrayList<>();
+        ArrayList<Integer> output=new ArrayList<>();
+
         for(i=0;i<charCount.length;i++){
             if(charCount[i]>0){
                  output.add(charCount[i]);
             }
         }
-         
-        Collections.sort(output, Collections.reverseOrder());
-        
-        
-         System.out.println("Occurrences (sorted in descending order):");
-         for (int count : output) 
+       
+         Collections.sort(output, Collections.reverseOrder());
+
+         for(i=0;i<output.size();i++)
          {
-             System.out.print(count+" ");
+            System.out.print(  output.get(i)+" ");
          }
 
                
