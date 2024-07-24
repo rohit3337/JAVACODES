@@ -8,9 +8,10 @@ public class Search
         int start=0;
         int end=n-1;
         int mid,count=0;
-        while(start<end)
+        while(start<=end)
         
         {
+          count++;
             mid=start+(end-start)/2;
 
             if(target==(Integer)num.get(mid))
@@ -54,7 +55,7 @@ public class Search
         System.out.print("Enter Target :");
         target =sc.nextInt();
       System.out.println(getComparision(num, n, target));
-        System.out.println(num.get(n-1));
+       
        
     }
 }
